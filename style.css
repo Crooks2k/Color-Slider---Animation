@@ -1,0 +1,107 @@
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.699);
+}
+/*Containers styles*/
+.main-container{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 19%;
+    left: 35%;
+    box-shadow: 0px 0px 12px 6px rgba(255, 255, 255, 0.452);
+    border-radius: 120px 30px 120px 30px;
+}
+
+.center{
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	left: 0;
+    border-radius: 120px 30px 120px 30px;
+}
+/*Radio opacy*/
+input[type="radio"]{
+	display:none;
+}
+
+/*Circles Radio Styles and position*/
+.circle {
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 5;
+	top: 75%;
+	left: 95px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#c2{
+    left: 171px;
+}
+
+#c3{
+    left: 247px;
+}
+/*Circle filling*/
+.active {
+	position: absolute;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 50%;
+	top: 76.3%;
+	left: 100px;
+	transition: all 1s ease;
+}
+/*Active circle conditions*/
+#check1:checked ~ .active{
+    transform: translateX(0px);
+}
+#check2:checked ~ .active{
+    transform: translateX(76px);
+}
+#check3:checked ~ .active{
+    transform: translateX(152px);
+}
+/*BackGround color rotate*/
+.bg {
+	position: absolute;
+	width: 1200px;
+	height: 400px;
+	top: 0;
+	left: 0;
+	background: #3498db;
+	border-left: 400px solid #9b59b6;
+	border-right: 400px solid #1abc9c;
+	transition: all 1s ease-in-out;
+	transform: translate(0px);
+}
+#check1:checked ~ .bg {
+    transform: translate(0px);
+}
+#check2:checked ~ .bg {
+    transform: translateX(-400px);
+}
+#check3:checked ~ .bg {
+    transform: translateX(-800px);
+}
+
+.credits{
+	text-align: center;
+	margin-top: 4rem;
+	font-weight: 900;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.37);
+}
